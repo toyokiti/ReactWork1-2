@@ -1,5 +1,7 @@
-const TaskView = (props) => {
+import StatusButton from './StatusButton'
+import Deletebutton from './DeleteButton'
 
+const TaskView = (props) => {
     return (
         <div className="viewTaskArea">
         <table>
@@ -18,8 +20,12 @@ const TaskView = (props) => {
                     <td>{index+1}</td>
                     <td>{todo}</td>
                     <td>
-                        <button>作業中</button>
-                        <button>削除</button>
+                        <StatusButton />
+                        <Deletebutton
+                            index={index} 
+                            todoList={props.todoList}
+                            setTodoList={props.setTodoList}
+                        />
                     </td>               
                 </tr>
                 ); //return 
