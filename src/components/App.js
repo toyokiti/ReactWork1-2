@@ -22,7 +22,12 @@ const App = () => {
       <h1>TODOリスト</h1>
 
       <RadioButtonView />
-      <TaskView todoList={todoList}/>  
+      <TaskView 
+        todoList={todoList}
+        onClickAdd={onClickAdd}
+        setTodoList = {setTodoList} 
+      />  
+        
       <AddTaskForm
         todoText={todoText} 
         setTodoText={setTodoText}
